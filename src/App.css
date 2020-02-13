@@ -12,10 +12,26 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.heading {
+  display: grid;
+  width: 100%;
+  height: 100px;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+.heading h3{
+  align-self: center;
+}
+
+.planet-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,5 +50,13 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 450px){
+  .planet-container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    grid-gap: 30px;
   }
 }
